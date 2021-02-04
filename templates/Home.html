@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable Sem-7</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        .dark-mode{
+            background-color: #111222;
+            color: white;
+        }
+        .img-change {
+          src:url({% static "light.png" %});
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="background-color: #e3f2fd;" class="navbar navbar-expand-lg navbar-dark bg-dark shadow p-3 mb-5 techfont costom-navbar">
+        <div class="container">
+            <a title="Star Social" style="font-size:30px" class="navbar-brand bigbrand" href="{% url 'home' %}">TimeTable</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">About<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class='nav-item'>
+                        <button onclick="myfunc()" id='switchToDarkMode' style='border:1px solid grey;border-radius:25%' type="button" name="button">
+                            <div id="imgToggler">
+                              <img src="{% static 'dark.png' %}" title='Dark Mode' height='30px' width='30px' alt="Dark Mode">
+                              <img src="{% static 'light.png' %}" title='Light Mode' height='30px' width='30px' alt="Light Mode" style="display:none">
+                            </div>
+                            {% comment %} <svg src='{% static "dark.svg" %}'></svg> {% endcomment %}
+                        </button>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='container'>
+        <div class='row'>
+            <div class="col-sm-4">
+                {% include "monday.html" %}
+            </div>
+            <div class="col-sm-4">
+                {% include "tuesday.html" %}
+            </div>
+            <div class="col-sm-4">
+                {% include "wednesday.html" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                {% include "thursday.html" %}
+            </div>
+            <div class="col-sm-4">
+                {% include "friday.html" %}
+            </div>
+            <div class="col-sm-4">
+              {% include "satureday.html" %}
+            </div>
+        </div>
+    </div>
+    <script>
+      $(document).ready(
+        function(){
+          $("#switchToDarkMode").click(
+              function(){
+                $("table").toggleClass("table-dark")
+                $('body').toggleClass('dark-mode')
+                $('.btn-default').toggleClass('btn-secondary')
+                $('#imgToggler').find('img').toggle()
+              }
+          )
+        }
+    )
+    </script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+
+</html>

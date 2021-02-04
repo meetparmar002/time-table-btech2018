@@ -1,0 +1,106 @@
+{% load static %}
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Friday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>
+        <button class="btn btn-default " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          08:30 - 09:45
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-item" style="cursor:pointer" onclick=window.open('{% url 'sorry' %}')>
+             CS306 - Data Analysis and Visualization <small>PK</small>
+          </div>
+          <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/krz-jces-qkx ')>
+             CT321 - Digital Signal Processing <small>MVJ</small>
+          </div>
+          <div class="dropdown-item" style="cursor:pointer"
+            onclick=window.open('https://meet.google.com/uvd-zxnd-ijh')>
+             CT478 - Speech Technology <small>HP</small>
+          </div>
+          <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/oqx-uizz-xmh')>
+             EL422 - CMOS Analog IC Design <small>AK</small>
+          </div>
+          <div class="dropdown-item" style="cursor:pointer"
+            onclick=window.open(' http://daiict.webex.com')>
+            IE407 - Internet of Things <small>SS</small> <br>
+              Session ID: 158 001 8361
+              Password: IE407
+          </div>
+          <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/esy-cyhz-kwo')>
+             IE410 - Introduction to Robotics <small>TKM</small>
+          </div>
+        </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>
+        <button class="btn btn-default  " type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          10:15 - 11:30
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-item" style="cursor:pointer" onclick=window.open('{% url 'sorry' %}')>
+             CS301 - High Performance Computing <small>BC</small>
+          </div>
+        </div>
+</td>
+</tr>
+<tr>
+  <th>3</th>
+  <td>
+    <button class="btn btn-default  " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      12:00 - 13:15
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/gna-kivy-sad')>
+        CT351 - RF Engineering <small>SG</small>
+      </div>
+      <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/lookup/faz7ldnjsx')>
+        CT477 - Adaptive Signal Processing <small>RLD</small>
+      </div>
+      <div class="dropdown-item" style="cursor:pointer"
+        onclick=window.open('https://meet.google.com/lookup/fetzl35sii')>
+        IE411 - Operating System <small>AMM</small>
+      </div>
+      <div class="dropdown-item" style="cursor:pointer" onclick=window.open('https://meet.google.com/mns-ykbf-vdn')>
+         IT424 - Logic for CS <small>MKR</small>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<tr>
+<th>4</th>
+<td>
+  <button class="btn btn-default  " type="button" id="dropdownMenuButton"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    02:00 - 04:00/05:00
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-item" style="cursor:pointer"
+      onclick=window.open('{% url 'sorry' %}')>
+      Lab - IT413 - NoSQL <small>PMJ</small>
+    </div>
+    <div class="dropdown-item" style="cursor:pointer" onclick=window.open('{% url 'sorry' %}')>
+      Lab - IT441 - Comp. Graphics <small>NDJ</small>
+    </div>
+    <div class="dropdown-item" style="cursor:pointer"
+      onclick=window.open('{% url 'sorry' %}')>
+      Lab -  IE406 - ML <small>MVJ</small>
+    </div>
+  </div>
+</td>
+</tr>
+
+</table>
